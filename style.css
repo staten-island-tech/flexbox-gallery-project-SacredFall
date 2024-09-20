@@ -9,8 +9,6 @@ html{
            ),
            /* bottom, image */
            url(Deepwoken.jpg);
-    padding: 0;
-    margin: 0;
 }
 
 .topbar{
@@ -23,21 +21,24 @@ html{
 .flip-card{
     background-color: transparent;
     width: 236px;
-    length: 311px;
+    height: 311px;
     perspective: 1000px;
-
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
-.flip-card-inside{
-    width: 236px;
-    length: 311px;
+.flip-card-inner{
     position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+  }
 
-.flip-card:hover .flip-card-inside{
+.flip-card:hover .flip-card-inner{
     transform: rotateY(180deg);
 }
 
@@ -47,6 +48,8 @@ html{
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    padding: 0;
+    margin: 0;
 }
 
 .flip-card-front{
@@ -54,13 +57,20 @@ html{
     color: black;
 }
 .flip-card-back{
-    background-color: #2980b9;
+    background-image: url(old-paper.jpg);
     color: white;
     transform: rotateY(180deg);
 }
 
+.flip-card-front img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
 .flex-container{
     display: flex;
     flex-wrap: nowrap;
-    background-color: #1f1f1f ;
+    background-color: transparent;
 }
