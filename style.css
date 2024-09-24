@@ -2,7 +2,6 @@ html{
     font-family: "Fondamento", cursive;
     font-weight: 400;
     font-style: normal;
-    background-repeat: no-repeat;
     background-size: cover;
     background-image:
            /* top, transparent black, faked with gradient */ 
@@ -20,6 +19,20 @@ html{
     text-align: center;
     font: size 2rem;
 }
+
+h1{
+    font-size: 3vw;
+}
+
+h2{
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1vw;
+}
+
+
 
 .flip-card{
     background-color: transparent;
@@ -42,9 +55,9 @@ html{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
 
-.flip-card:hover .flip-card-inner{
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-    box-shadow: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Example for more pronounced effect */
 }
 
 .flip-card-front, .flip-card-back {
@@ -85,4 +98,25 @@ html{
 }
 
 
-  
+@media screen and (max-width: 1000px) {
+    .flip-card {
+        width: 100px; /* Use percentage instead of fixed pixel values */
+        height: 150px;
+    }
+    .flex-container{
+        padding: 5px 10px;
+    }
+
+    h1{
+        font-size: 3vw;
+    }
+}
+
+.logo:hover{
+    transform:scale(1.15)
+}
+
+.card1:hover .flip-card{
+    transform: rotateX(180deg);
+}
+
