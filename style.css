@@ -112,10 +112,17 @@ p{
     }
 }
 
+
+.logo{
+    transition: all 1s;
+}
 .logo:hover{
     transform:scale(1.15)
 }
 
+.skib{
+    transition:4s
+}
 .skib:hover{
     transform: rotateX(180deg);
 }
@@ -125,6 +132,10 @@ p{
 }
 .dop:hover{
     background-color: blue;
+}
+
+.card1{
+    transition: 2s;
 }
 .card1:hover .flip-card-inner{
     transform: scale(1.5);
