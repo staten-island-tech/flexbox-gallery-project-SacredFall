@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 
 html {
     font-family: "Fondamento", cursive;
