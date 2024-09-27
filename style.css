@@ -1,43 +1,38 @@
-html{
+
+
+html {
     font-family: "Fondamento", cursive;
     font-weight: 400;
     font-style: normal;
     background-size: cover;
-    background-image:
-           /* top, transparent black, faked with gradient */ 
-           linear-gradient(
-             rgba(0, 0, 0, 0.7), 
-             rgba(0, 0, 0, 0.7)
-           ),
-           /* bottom, image */
-           url(Deepwoken.jpg);
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(Deepwoken.jpg);
 }
 
-.topbar{
+.topbar {
     color: white;
     background-size: cover;
     text-align: center;
-    font: size 2rem;
+    font-size: 2rem;
 }
 
-h1{
+h1 {
     font-size: 3vw;
 }
 
-h2{
+h2 {
     font-size: 2vw;
 }
 
-p{
+p {
     font-size: 1vw;
 }
 
-
-
-.flip-card{
+.flip-card {
     background-color: transparent;
-    width: 14%;
-    height: 17vw;
+    width: 15%;
+    height: 20rem;
     perspective: 1000px;
     display: flex;
     flex-wrap: wrap;
@@ -45,105 +40,127 @@ p{
     box-shadow: 10px 5px 5px black;
 }
 
-.flip-card-inner{
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.6s;
+    transition: transform 1.5s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
+}
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Example for more pronounced effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    padding: 0;
-    margin: 0;
 }
 
-.flip-card-front{
+.flip-card-front {
     background-color: transparent;
     color: black;
 }
-.flip-card-back{
+
+.flip-card-back {
     background-image: url(old-paper.jpg);
     color: white;
     transform: rotateY(180deg);
 }
 
-.flip-card-front img{
+.flip-card-front img {
     width: 100%;
     height: 100%;
 }
 
-
-
-.flex-container{
+.flex-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: transparent;
     justify-content: center;
     align-items: center;
     padding: 50px 100px;
-
 }
 
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 2000px) {
     .flip-card {
-        width: 100px; /* Use percentage instead of fixed pixel values */
-        height: 150px;
+        height: 20vw;
     }
-    .flex-container{
+}
+
+@media screen and (max-width: 1200px) {
+    .flip-card {
+        width: 30%;
+        height: 40vw;
+    }
+
+    .flex-container {
         padding: 5px 10px;
     }
 
-    h1{
+    h2 {
+        font-size: 2vw;
+    }
+
+    p {
         font-size: 3vw;
     }
 }
 
+@media screen and (max-width: 700px) {
+    .flip-card {
+        width: 50%;
+        height: 60vw;
+    }
 
-.logo{
+    .flex-container {
+        padding: 5px 10px;
+    }
+
+    h2 {
+        font-size: 2vw;
+    }
+
+    p {
+        font-size: 3vw;
+    }
+}
+
+.logo {
     transition: all 1s;
 }
-.logo:hover{
-    transform:scale(1.15)
+
+.logo:hover {
+    transform: scale(1.15);
 }
 
-.skib{
-    transition:4s
+.skib {
+    transition: 4s;
 }
-.skib:hover{
+
+.skib:hover {
     transform: rotateX(180deg);
 }
 
-.dop{
+.dop {
     background-color: black;
     transition: 2s;
 }
-.dop:hover{
+
+.dop:hover {
     background-color: blue;
 }
 
-.card1{
+.card1 {
     transition: 2s;
 }
-.card1:hover .flip-card-inner{
-    transform: scale(1.5);
-}
 
-.flip-card{
-    transition: 1s;
+.card1:hover .flip-card-inner {
+    transform: scale(1.5);
 }
 
 .circle {
@@ -158,10 +175,9 @@ p{
 @keyframes bounce {
     0% {
         transform: translateY(0);
-    
-        background-color:blue;
+        background-color: blue;
     }
-    50%{
+    50% {
         transform: scale(0.5);
     }
     100% {
@@ -169,5 +185,3 @@ p{
         background-color: red;
     }
 }
-
-
